@@ -405,3 +405,25 @@ body::-webkit-scrollbar-thumb {
     background-color: #ff702a;
     border-radius: 100%;
 }
+
+/* 8. ScrollbarBtn */
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff702a;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+#scrollToTopBtn i {
+    margin-top: 8px;
+    margin-left: 8px;
+}

@@ -18,6 +18,18 @@
                 menuLinks.classList.toggle("show-menu");
             });
         });
+        window.onscroll = function () {
+            var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
     </script>
 
     <title>Consumiendo del Bucket</title>
@@ -168,7 +180,9 @@
         </div>
     </div>
 
-
+    <div id="scrollToTopBtn" onclick="scrollToTop()">
+        <i class='bx bxs-up-arrow'></i>
+    </div>
 </body>
 
 </html>
