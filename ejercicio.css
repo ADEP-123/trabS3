@@ -1,0 +1,334 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+body{
+    background-color: #212121;
+    width: 100%;
+    height: 100vh;
+    color: #1e1d2b
+}
+
+/* 1. Barra de navegacion */
+#navbar{
+    height: 12%; 
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 1%;
+}
+
+#tittle{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 50vw;
+    margin-left: 5vw;
+
+}   
+#tittle>h2{
+    color: #fa5252;
+}
+
+#buttons{
+    height: 100%;
+    width: 45vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#buttons>a{
+    text-decoration: none;
+}
+
+/* 2. Home page */
+#home{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid #ff702a;
+}
+#home>div{
+    height: 100%;
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#homeInfo>#fw{
+    color: #ff702a;
+    letter-spacing: 5px;
+    font-size: 4em
+}
+#homeInfo>a{
+    text-decoration: none;
+    text-align: center;
+    border: 1px gray;
+    background-color: #ff702a;
+    width: 30%;
+    margin-top: 2%;
+}
+#homeInfo>a:hover{
+    box-shadow: 2px 2px 2px #ff702a;
+}
+#homeImage,#homeInfo{
+    padding: 3vw;
+}
+#homeImage>img{
+    height: 30vh;
+}
+
+/* 3. About Us */
+#about_us{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    width: 100%;
+    border: 1px solid #ff702a;
+}
+#about_us>div{
+    height: 100%;
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#aboutInfo>#fw{
+    color: #ff702a;
+    letter-spacing: 1px;
+    font-size: 1em
+}
+#aboutInfo>a{
+    text-decoration: none;
+    text-align: center;
+    border: 1px gray;
+    background-color: #ff702a;
+    width: 30%;
+    margin-top: 2%;
+}
+#aboutInfo>a:hover{
+    box-shadow: 2px 2px 2px #ff702a;
+}
+#aboutImage>img{
+    height: 30vh;
+}
+#aboutImage,#aboutInfo{
+    padding: 6vw;
+}
+
+/* 4. Food Menu */
+#food_menu {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid #ff702a;
+}
+#menuInfo, #menu_cards {
+    margin-top: 3vh;
+}
+#menuInfo>#fw {
+    color: #ff702a;
+    letter-spacing: 1px;
+    font-size: 1em;
+    text-align: center;
+}
+#menuInfo>p>b {
+    letter-spacing: 5px;
+    font-size: 1.5em;
+    text-align: center;
+}
+#menu_cards {
+    padding: 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+@media (max-width: 785px) {
+    #menu_cards {
+      display: block; 
+      text-align: center; 
+    }
+}
+.foodCard {
+    margin-bottom: 2vw;
+    margin-left: 2vw;
+    position: relative;
+    background-color: #ffefe8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 25vw;
+    max-width: 300px;
+    min-width: 210px;
+    height: 25vw;
+    max-height: 300px;
+    min-height: 210px;
+}
+.foodCard::after {
+    content: '';
+    position: absolute;
+    top: -3%; 
+    left: -3%; 
+    width: 101%; 
+    height: 101%; 
+    border: 2px dashed #ffefe8; 
+    transform: rotate(-1deg); 
+    z-index: -1; 
+}
+.foodCard:hover {
+    box-shadow: 2px 2px 2px #ffefe8;
+}
+
+.foodImage {
+    width: 10vw;
+}
+.foodName {
+    letter-spacing: 5px;
+    font-size: 1em;
+    color: #1e1d2b;
+}
+.foodType {
+    font-size: 0.8em;
+    color: #1e1d2b;
+}
+.foodPrice {
+    font-size: 0.8em;
+    color: #ff702a;
+}
+/* 5. Services */
+#services{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid #ff702a;
+}
+#servicesInfo, #services_cards {
+    margin-top: 3vh;
+}
+#servicesInfo>#fw {
+    color: #ff702a;
+    letter-spacing: 1px;
+    font-size: 1em;
+    text-align: center;
+}
+#servicesInfo>p>b {
+    letter-spacing: 5px;
+    font-size: 1.5em;
+    text-align: center;
+}
+#services_cards {
+    padding: 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+@media (max-width: 785px) {
+    #services_cards {
+      display: block; 
+      text-align: center; 
+    }
+}
+.serviceCard {
+    margin-bottom: 2vw;
+    margin-left: 2vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 25vw;
+    max-width: 300px;
+    min-width: 210px;
+    height: 25vw;
+    max-height: 300px;
+    min-height: 210px;
+}
+.serviceImage {
+    width: 10vw;
+}
+.serviceName {
+    font-size: 1em;
+    color: #ff702a;
+    margin-bottom: 0.5vh;
+}
+.serviceInfo {
+    font-size: 0.8em;
+    text-align: center;
+}
+
+/* 6. Learn More */
+#learnMore{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid #ff702a;
+}
+#learnMoreBanner{
+    position: relative;
+    background-color: #ffefe8;
+    margin: 3vw;
+    width: 94vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+}
+#learnMoreBanner::after {
+    content: '';
+    position: absolute;
+    top: -1%; 
+    left: -0.5%; 
+    width: 101%; 
+    height: 101%; 
+    border: 2px dashed #ffefe8;  
+    z-index: -1; 
+}
+#learnMoreBanner>p{
+    color: black;
+    font-size: 2.5em;
+    text-align: center;
+    letter-spacing: 3px;
+}
+#learnMoreBanner>button{
+    background-color: #ff702a;
+    width: 10%;
+    padding: 0.5%;
+    border: 0px;
+}
+/* 7. Contact */
+#contact{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    border: 1px solid #ff702a;
+}
+.contactList{
+    display: flex;
+    flex-direction: column;
+}
+.contactList>h3{
+    word-spacing: 4px;
+    border-bottom: 2px orange;
+}
