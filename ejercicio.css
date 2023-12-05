@@ -53,6 +53,56 @@ body::-webkit-scrollbar-thumb {
     text-decoration: none;
 }
 
+#menuBtn {
+    display: none;
+    font-size: 1.2em;
+    background-color: #ff702a;
+    cursor: pointer;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 10%;
+    margin-right: 5vw;
+}
+
+#menuLinks {
+    display: none;
+}
+
+#menuLinks a {
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+}
+
+@media (max-width: 780px) {
+    #buttons{
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+    }
+    #buttons>a{
+        display: none;
+        border: none;
+    }
+
+    #menuBtn {
+        display: block;
+    }
+
+
+}
+#menuLinks.show-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #212121;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 50%;
+    z-index: 1;
+}
+
+
 /* 2. Home page */
 #home{
     display: flex;

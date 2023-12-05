@@ -9,6 +9,17 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="ejercicio.css" />
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var menuBtn = document.getElementById("menuBtn");
+            var menuLinks = document.getElementById("menuLinks");
+
+            menuBtn.addEventListener("click", function () {
+                menuLinks.classList.toggle("show-menu");
+            });
+        });
+    </script>
+
     <title>Consumiendo del Bucket</title>
 </head>
 
@@ -19,6 +30,14 @@
             <h2>Foods</h2>
         </div>
         <div id="buttons">
+            <button id="menuBtn">&#9776;</button>
+            <div id="menuLinks">
+                <a href="#home">Home</a>
+                <a href="#about_us">About</a>
+                <a href="#food_menu">Menu</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
             <a href="#home">Home</a>
             <a href="#about_us">About</a>
             <a href="#food_menu">Menu</a>
