@@ -10,8 +10,18 @@ body{
     background-color: #212121;
     width: 100%;
     height: 100vh;
-    color: #1e1d2b
+    color: #1e1d2b;
+    overflow-y: auto;
+    scroll-behavior: smooth;
 }
+body::-webkit-scrollbar {
+    width: 12px;            
+}
+body::-webkit-scrollbar-thumb {
+    background-color:#ff702a;   
+    border-radius: 20px;      
+}
+
 
 /* 1. Barra de navegacion */
 #navbar{
@@ -22,19 +32,16 @@ body{
     align-items: center;
     padding-bottom: 1%;
 }
-
 #tittle{
     height: 100%;
     display: flex;
     align-items: center;
     width: 50vw;
     margin-left: 5vw;
-
 }   
 #tittle>h2{
     color: #fa5252;
 }
-
 #buttons{
     height: 100%;
     width: 45vw;
@@ -318,8 +325,8 @@ body{
 /* 7. Contact */
 #contact{
     display: flex;
-    align-items: center;
-    align-content: center;
+    align-items: flex-start;
+    justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
     border: 1px solid #ff702a;
@@ -327,8 +334,24 @@ body{
 .contactList{
     display: flex;
     flex-direction: column;
+    padding: 2vh;
 }
 .contactList>h3{
     word-spacing: 4px;
-    border-bottom: 2px orange;
+    border-bottom: 2px solid #ff702a;
+    margin-bottom: 1vh;
+}
+.contactList>a{
+    text-decoration: none;
+}
+#social_media{
+    display: flex;
+    justify-content: space-around;
+}
+.sm{
+    width: 50px;
+    height: 50px;
+    margin-right: 2%;
+    background-color: #ff702a;
+    border-radius: 100%;
 }
